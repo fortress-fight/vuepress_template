@@ -20,6 +20,13 @@
 # 隐藏指定页面上的编辑链接：
 # editLink: false
 
+# 自定义页面的 Class
+pageClass: c-index_page
+
+# 自定义页面布局
+# 下面将会使用 .vuepress/components/SpecialLayout.vue。为当前页面渲染
+# layout: SpecialLayout
+
 home: true
 heroImage: /hero.png
 actionText: 起步 →
