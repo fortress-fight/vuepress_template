@@ -7,6 +7,16 @@
 # 当前页面标签，默认为当前页面的 H1
 # title: VuePress
 
+# 语言
+lang: zh-CN
+
+# meta
+meta:
+    - name: description
+      content: Vuepress-template
+    - name: keywords
+      content: Vuepress template
+
 # 最大值为2，用于覆盖 config.js 中的 sidebarDepth
 # sidebarDepth: 2
 

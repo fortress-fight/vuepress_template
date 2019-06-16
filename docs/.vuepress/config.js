@@ -32,7 +32,11 @@ module.exports = {
         // 代码是否带有行数的标识
         lineNumbers: true,
         // 目录渲染层级
-        toc: { includeLevel: [2, 3] }
+        toc: { includeLevel: [2, 3] },
+        config: md => {
+            // 使用更多 [markdown-it](https://github.com/markdown-it/markdown-it) 插件！
+            // md.use(require("markdown-it-xxx"));
+        }
     },
     themeConfig: {
         // 顶部导航，如果需要禁用导航，需要设置 navbar: false
@@ -82,7 +86,8 @@ module.exports = {
                 children: [
                     "/Introduction/",
                     "/Introduction/Feature",
-                    "/Introduction/Theme"
+                    "/Introduction/Theme",
+                    "/Introduction/Markdown"
                 ]
             },
             {
