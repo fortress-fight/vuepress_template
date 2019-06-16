@@ -17,7 +17,7 @@ module.exports = {
      */
     head: [],
     /**
-     * 指定此选项来使用自定义主题。使用 "foo" 的值，
+     * 指定此选项来设置默认的自定义主题。使用 "foo" 的值，
      * VuePress 将尝试在 node_modules/vuepress-theme-foo/Layout.vue 加载主题组件。
      */
     theme: undefined,
@@ -70,11 +70,21 @@ module.exports = {
              * 你可以省略 .md 扩展名，以 / 结尾的路径被推断为 *\/README.md 。
              * 该链接的文本是自动推断的（从页面的第一个标题或 YAML front matter 中的显式标题）。
              * 如果你希望明确指定链接文本，请使用 \[link,text] 形式的数组。
+             * "/Introduction/"
              */
-            "/Introduction/",
+
             /**
              * 侧边栏可以分组，形式如下
              */
+            {
+                title: "简介",
+                collapsable: false,
+                children: [
+                    "/Introduction/",
+                    "/Introduction/Feature",
+                    "/Introduction/Theme"
+                ]
+            },
             {
                 title: "官方文档",
                 collapsable: false,
@@ -83,6 +93,10 @@ module.exports = {
                     [
                         "https://www.vuepress.cn/default-theme-config/",
                         "默认主题配置"
+                    ],
+                    [
+                        "https://www.vuepress.cn/config/#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE-basic-config",
+                        "配置参考"
                     ]
                 ]
             }
@@ -113,7 +127,7 @@ module.exports = {
          */
 
         // 侧边栏自动显示当前激活页面中标题的链接，嵌套在页面本身的链接下
-        sidebarDepth: 1,
+        sidebarDepth: 2,
         /**
          * 默认情况下，侧边栏只会显示由当前活动页面的标题（headers）组成的链接，
          * 你可以将 themeConfig.displayAllHeaders 设置为 true 来显示所有页面的标题链接：

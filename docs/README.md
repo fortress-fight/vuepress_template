@@ -10,6 +10,7 @@
 # 最大值为2，用于覆盖 config.js 中的 sidebarDepth
 # sidebarDepth: 2
 
+# 首页没有侧边栏
 # 生成仅包含当前页面的标题链接的侧边栏，设置为 false 表示禁止
 # sidebar: auto
 
@@ -30,7 +31,7 @@ pageClass: c-index_page
 home: true
 heroImage: /hero.png
 actionText: 起步 →
-actionLink: ./#VuePress-Template
+actionLink: /Introduction/
 features:
     - title: 简明优先
       details: 对以 markdown 为中心的项目结构，做最简化的配置，帮助你专注于创作。
