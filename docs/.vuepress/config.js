@@ -1,6 +1,6 @@
 module.exports = {
     // 网站的标题，同时会出现在页面的左上角导航旁边
-    title: "Hellow VuePress",
+    title: "VuePress Template",
     /**
      * 根路径，在文件中引用静态资源的时候使用 `$witchBase('/foo.png')`
      * <img :src="$withBase('/foo.png')" alt="foo">
