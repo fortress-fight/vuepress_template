@@ -22,12 +22,16 @@
     },
     "husky": {
         "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "post-update": "git-branch-is master && sh deploy.sh"
         }
     },
     "config": {
         "commitizen": {
             "path": "cz-customizable"
         }
+    },
+    "dependencies": {
+        "git-branch-is": "^2.1.0"
     }
 }
