@@ -37,6 +37,8 @@ const themeConfig = Object.assign(
 );
 
 module.exports = {
+    // 指定额外的需要被监听的文件。
+    extraWatchFiles: [".vuepress/_config/*.*"],
     // 网站的标题，同时会出现在页面的左上角导航旁边
     title: "VuePress Template",
     /**
