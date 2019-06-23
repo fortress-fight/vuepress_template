@@ -1,3 +1,75 @@
-/** 
+/* *
     VuePress 提供了一种添加额外样式的简便方法。
 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('/.vuepress/fonts/iconfont.eot?t=1561303571282'); /* IE9 */
+    src: url('/.vuepress/fonts/iconfont.eot?t=1561303571282#iefix') format('embedded-opentype'), url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAKcAAsAAAAABlAAAAJPAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcApcdgE2AiQDCAsGAAQgBYRtBy8bmwUR1Ys5si+Ld4jPnJaNDScIx1u+M4wTpwqj7F8ZRyyi7Pl8EA//rb3etzP7MyFUiAo8oANU0VFRqTDAqlWOLArV41kCyerfEzxBwWADTjiC3AOA+c3N+sgaFaFYkvO8n5aZdDDCpfkllOLY2YEl+gln4cf9opcWyQfaNsEFQBUM+cS9078CCmQ+oJz2prEmTRpAXRxQgHthm6yEMm4Yu8AlnCfQZtSy2GmVhiKzpgXiOlQPJeeXZZYqQqNmbRbP1Er1pBpPw+/Hn5UoVOrEqji6kgk2vmNnpNvNLn1CgIA210hYRibOauMHkmDspC2eTbKv0uA7zaZvE3s1C/bXWcUdYBhK7knqym41VcFtSfq0z4x6IDF8y532dqrt7heZ0ROfIZxZ42vc4P+sWq3gDE0nUFUGNWdJBKXQYYP1s7SRHQheUUcd8X9pz+Cjr0GmrJ+TsjtH8FukPVuyLresVValtd2V4dNVtWlDE7v7fBtrGLyHdCgGRzhbjKRIimkys5ZRa7eGhmIdbZbsb27X70YSuRWLHgCEHs9R6fIeSY8PZGZ9RW3IPzT0REKbi2DPdrOBBVtwUJxh/EOYeCfHrjYqvaF7r4Nk5SHnhZJCCKq8LKauuKPMsSB9XK1KQMIbtOAyXFeGQzjipLlXPZqioLo35RNvxpqCg+IM4x/CxDv5vdWWPn9D914HaWmqCb9QUhgcqrzsQV41e6+me7kmfVytSkDCG7RgFK4rw1E/KuKkuR8RPZrC7kR9Nfn6uu3r9kGbsYzVxR6SmFZOaAwAAAA=') format('woff2'), url('/.vuepress/styles/fonts/iconfont.woff?t=1561303571282') format('woff'), url('/.vuepress/styles/fonts/iconfont.ttf?t=1561303571282') format('truetype'), url('/.vuepress/styles/fonts/iconfont.svg?t=1561303571282#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: 'iconfont' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iconclose:before {
+    content: '\e619';
+}
+
+/*
+ * 全局默认样式
+ */
+.content__default {
+    min-height: calc(100vh - 7.2em - 190px);
+}
+
+.opacity {
+    opacity: 0;
+}
+
+.hide {
+    display: none;
+}
+
+h2 {
+    padding-bottom: 1rem;
+}
+
+.page {
+    hr:first-of-type {
+        border-top-width: 5px;
+    }
+}
+
+// clip-border
+pre {
+    position: relative;
+
+    code::selection {
+        background: transparent;
+    }
+
+    &:hover {
+        .copy_btn {
+            opacity: 1;
+        }
+    }
+
+    .copy_btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.7rem;
+        opacity: 0;
+        z-index: 99;
+        transition: 0.15s ease;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
